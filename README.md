@@ -9,6 +9,8 @@
 - [x] Attach database to the app
 - [x] Add authentication (w/ clerk)
 - [ ] Add image upload
+- [ ] "taint" (server-only)
+- [ ] Use Next/Image component
 - [ ] Error mangement (w/ sentry)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (w/ server actions)

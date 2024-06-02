@@ -10,12 +10,9 @@ async function Images() {
   });
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 align-middle">
-      {images.map((image, index) => (
-        <div
-          className="my-auto flex w-48 flex-col gap-2"
-          key={image.id + `-${index++}`}
-        >
+    <div className="flex flex-wrap justify-evenly gap-4 align-middle">
+      {images.map((image) => (
+        <div className="my-auto flex w-48 flex-col gap-2" key={image.id}>
           <img src={image.url} alt="image" />
           <div>{image.name}</div>
         </div>
