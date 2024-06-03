@@ -2,7 +2,8 @@
 // import { Modal } from "./modal";
 
 import { clerkClient } from "@clerk/nextjs/server";
-import { getImage } from "~/server/queries";
+import { deleteImage, getImage } from "~/server/queries";
+import { Button } from "./ui/button";
 
 export default async function FullPageImageView(props: { photoId: number }) {
   const image = await getImage(props.photoId);
@@ -24,6 +25,18 @@ export default async function FullPageImageView(props: { photoId: number }) {
         </div>
         <div className="flex flex-col p-2">
           Created On: {image.createdAt.toLocaleDateString()}
+        </div>
+        <div className="flex flex-col p-2">
+          <form
+            action={async () => {
+              "use server";
+              await deleteImage(image.id);
+            }}
+          >
+            <Button type="submit" variant="destructive">
+              Delete
+            </Button>
+          </form>
         </div>
       </div>
     </div>
