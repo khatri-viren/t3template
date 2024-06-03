@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-// import { Modal } from "./modal";
-
 import { clerkClient } from "@clerk/nextjs/server";
 import { deleteImage, getImage } from "~/server/queries";
 import { Button } from "./ui/button";
