@@ -18,3 +18,10 @@
 - [x] Analytics (posthog)
 - [x] Delete button (w/ server actions)
 - [x] Ratelimiting (upstash)
+
+## Future Upgrades
+
+- Fix the page layout for images of different resolutions
+- "Selecting" images on the gallery page
+- infinite scrolling
+- folders/albums
